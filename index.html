@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FirmandaYsh</title>
+
+        <!-- STYLE -->
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        
+        <!-- FONT AWESOME -->
+        <script src="https://kit.fontawesome.com/36f8c4c0c2.js" crossorigin="anonymous"></script>
+
+        <!-- Jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <img src="img/logo_fys.svg" class="shadow-img bg-left" alt="">
+        <img src="img/logo_fys.svg" class="shadow-img bg-right" alt="">
+        <div id="particles-js">
+        </div>
+        <div class="container-fluid main-container">
+            
+            <div class="row upper-line">
+                <div class="col-md-6">
+                    <div class="logo-room">
+                        <img class="logo-fys" src="img/logo_fys.svg" alt="">
+                    </div>
+                    <span class="character-name">
+                        FIRMANDA YAHYA SOFIANSYAH
+                    </span>
+                </div>
+                <div class="col-md-3">
+                    <!-- <span class="character-name">
+                        <i class='fas fa-wind flip-icon' style="margin-right: 8px;"></i>
+                        FIRMANDA YAHYA SOFIANSYAH
+                        <i class='fas fa-wind' style="margin-left: 8px;"></i>
+                    </span> -->
+                </div>
+                <div class="col-md-3">S2</div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="side-button-container">
+                                <button class="tablinks owned-property" onclick="openAttribute(event, 'Attribute')">
+                                    <i class="fas fa-dice-d20" style="font-size: 24px;"></i>
+                                    <span class="o-property-title">Attributes</span>
+                                </button>
+                                <button class="tablinks owned-property" onclick="openAttribute(event, 'Education')">
+                                    <i class="fas fa-dice-d20" style="font-size: 24px;"></i>
+                                    <span class="o-property-title">Education</span>
+                                </button>
+                                <button class="tablinks owned-property" onclick="openAttribute(event, 'Experience')">
+                                    <i class="fas fa-dice-d20" style="font-size: 24px;"></i>
+                                    <span class="o-property-title">Experiences</span>
+                                </button>
+                                <button class="tablinks owned-property" onclick="openAttribute(event, 'Project')">
+                                    <i class="fas fa-dice-d20" style="font-size: 24px;"></i>
+                                    <span class="o-property-title">Projects</span>
+                                </button>
+                                <button class="tablinks owned-property" onclick="openAttribute(event, 'Talent')">
+                                    <i class="fas fa-dice-d20" style="font-size: 24px;"></i>
+                                    <span class="o-property-title">Talents</span>
+                                </button>
+                                <button class="tablinks owned-property" onclick="openAttribute(event, 'Story')">
+                                    <i class="fas fa-dice-d20" style="font-size: 24px;"></i>
+                                    <span class="o-property-title">Stories</span>
+                                </button>
+
+                                <!-- <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+                                <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+                                <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button> -->
+                            </div> 
+                            <!-- <div class="bottom-left-container">
+                                <button>
+                                    <i class="fas fa-dice-d20" style="font-size: 24px;"></i>
+                                </button>
+                            </div> -->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="character-room">
+                                <div id="Attribute" class="Attribute tabcontent">
+                                    <img class="character" src="img/general_profile2.svg" alt="">
+                                </div>
+                                
+                                <div id="Education" class="Education tabcontent">
+                                    <img class="character" src="img/edu_profile.svg" alt="">
+                                </div>
+
+                                <div id="Experience" class="Experience tabcontent">
+                                    <img class="character" src="img/experience_profile.svg" alt="">
+                                </div>
+                                <div id="Project" class="Project tabcontent">
+                                    <img class="character" src="img/project_profile.svg" alt="" style="-webkit-box-reflect: below -80px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0, 0, 0, 0.185));">
+                                </div>
+                                <div id="Talent" class="Talent tabcontent">
+                                    <img class="character" src="img/talent_profile.svg" alt="">
+                                </div>
+                                <div id="Story" class="Story tabcontent">
+                                    <img class="character" src="img/story_profile.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="description-container">
+                                <div id="Attribute" class="Attribute tabcontent">
+                                    <h3>Character - Bio</h3>
+                                    <table class="bio-table" >
+                                        <tr>
+                                            <th class="align-top-table">Name</th>
+                                            <td class="align-top-table">Firmanda Yahya Sofiansyah S.Tr.Kom</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="align-top-table">Gender</th>
+                                            <td class="align-top-table">Male</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="align-top-table">Age</th>
+                                            <td class="align-top-table"><span id="age"></span> years old</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="align-top-table">Date of Birth</th>
+                                            <td class="align-top-table">17 August 2001</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="align-top-table">Origins</th>
+                                            <td class="align-top-table">Klaten, Jawa Tengah</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="align-top-table">Domicile</th>
+                                            <td class="align-top-table">Bantul, Yogyakarta</td>
+                                        </tr>
+
+                                    </table>
+                                    <br><br>
+                                    <p class="description" style="text-align: justify;">Enthusiastic and detail-oriented freshgraduate from Applied Bachelor Software Engineering Technology of
+                                        Universitas Gadjah Mada. Demonstrated passion for technology, web development, and multimedia through
+                                        coursework and personal projects. Eager to apply classroom knowledge to real-world challenges and contribute
+                                        to innovative solutions for mankind and the country. Having ability to work collaboratively in team environments
+                                        and can adapt to new changes and technologies. </p>
+                                </div>
+                                <div id="Education" class="Education tabcontent">
+                                    <h3>Character - Education</h3>
+                                    <div class="edu-card-container">
+                                        <div class="edu-card">
+                                            <span><em>2020-2024</em></span>
+                                            <h4>UNIVERSITAS GADJAH MADA</h4>
+                                            <span>
+                                                D4 Teknologi Rekayasa Perangkat Lunak <br>
+                                                Sekolah Vokasi
+                                            </span>
+                                        </div>
+
+                                        <div class="edu-card">
+                                            <span><em>2017-2020</em></span>
+                                            <h4>SMA NEGERI 1 SEWON</h4>
+                                            <span>
+                                                MIPA
+                                            </span>
+                                        </div>
+
+                                        <div class="edu-card">
+                                            <span><em>2014-2017</em></span>
+                                            <h4>SMP NEGERI 2 BANGUNTAPAN</h4>
+                                            <br>
+                                        </div>
+
+                                        <div class="edu-card">
+                                            <span><em>2008-2014</em></span>
+                                            <h4>SD MUHAMMADIYAH KLECO KOTAGEDE</h4>
+                                            <br>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div id="Experience" class="Experience tabcontent">
+                                    <h3>Character - Experiences</h3>
+                                    <div class="exp-card-container">
+                                        <div class="exp-card">
+                                            <div class="card-section">
+                                                <img src="" alt="">
+                                                <h4>Laboratorium T.R.Perangkat Lunak SV UGM</h4>
+                                                <h5><b>Labwork Assistant</b></h5> 
+                                                <span><b>Jan 2024 - Dec 2024</b> <em>(contract)</em></span>
+                                                <hr style="width: 50%; height: 2px; margin: 5% 25%;">
+                                                <span class="exp-desc">
+                                                    Delivering materials and assisting students in carrying out practical courses. 
+                                                    Then also assisting lecturers to assess assignments per practical meeting. </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="exp-card">
+                                            <div class="card-section">
+                                                <img src="" alt="">
+                                                <h4>Sanggar Cerdas Sorpring</h4>
+                                                <h5><b>Wordpress Developer</b></h5> <em>(contract)</em><span>
+                                                <span><b>Jan 2024 - Feb 2024</b></span><br>
+                                                <hr style="width: 50%; height: 2px; margin: 5% 25%;">
+                                                <span class="exp-desc">
+                                                    Joined the team project that developed the profile website for the Sanggar Cerdas Sorpring using WordPress as a CMS. </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="exp-card">
+                                            <div class="card-section">
+                                                <img src="" alt="">
+                                                <h4>Jogja Science Training (JST)</h4>
+                                                <h5><b>Frontend - Backend Developer</b> <em>(part-time)</em></h5>
+                                                <span><b>Jan 2023 - Jan 2024</b></span><br>
+                                                <hr style="width: 50%; height: 2px; margin: 5% 25%;">
+                                                <span class="exp-desc">
+                                                    Became a part-time worker and joined the SOLVE web development project, 
+                                                    which a platform for practicing Olympiad training questions fostered by JST. </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="exp-card">
+                                            <div class="card-section">
+                                                <img src="" alt="">
+                                                <h4>Koperasi "Kopma UGM"</h4>
+                                                <h5><b>Research and Technology Staff</b> <em>(full-time)</em></h5>
+                                                <span><b>Jan 2022 - Jan 2023</b></span><br>
+                                                <hr style="width: 50%; height: 2px; margin: 5% 25%;">
+                                                <span class="exp-desc">
+                                                    Work as an IT support staff, handling maintenance computer and website development. </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="exp-card">
+                                            <div class="card-section">
+                                                <img src="" alt="">
+                                                <h4>Mewah Rent</h4>
+                                                <h5><b>Frontend - Backend Developer</b> <em>(contract)</em></h5>
+                                                <span><b>Aug 2021 - Dec 2021</b></span><br>
+                                                <hr style="width: 50%; height: 2px; margin: 5% 25%;">
+                                                <span class="exp-desc">
+                                                    Joined in a Mewah Rent website profile development project. </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div id="Project" class="Project tabcontent">
+                                    <h3>Character - Projects</h3>
+                                    <div class="pro-card-container">
+                                        <a href="" class="pro-link">
+                                            <div class="pro-card">
+                                                <div class="row">
+                                                    <div class="col-md-12 pro-section">
+                                                        <div class="col-md-2 icon-section">
+                                                            <i class="fas fa-globe" style="font-size: 30px;"></i>
+                                                        </div>
+                                                        <div class="col-md-10 desc-section">
+                                                            <span class="pro-title">Sanggar Cerdas Sorpring</span>
+                                                            <!-- <span><b>Labwork Assistant</b></span>  -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        
+
+                                        <a href="" class="pro-link">
+                                            <div class="pro-card">
+                                                <div class="row">
+                                                    <div class="col-md-12 pro-section">
+                                                        <div class="col-md-2 icon-section">
+                                                            <i class="fas fa-globe" style="font-size: 30px;"></i>
+                                                        </div>
+                                                        <div class="col-md-10 desc-section">
+                                                            <span class="pro-title">Siap Olimpiade Versi Elektronik (SOLVE)</span>
+                                                            <!-- <span><b>Labwork Assistant</b></span>  -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <a href="" class="pro-link">
+                                            <div class="pro-card">
+                                                <div class="row">
+                                                    <div class="col-md-12 pro-section">
+                                                        <div class="col-md-2 icon-section">
+                                                            <i class="fas fa-globe" style="font-size: 30px;"></i>
+                                                        </div>
+                                                        <div class="col-md-10 desc-section">
+                                                            <span class="pro-title">Mewah Rental</span>
+                                                            <!-- <span><b>Labwork Assistant</b></span>  -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div id="Talent" class="Talent tabcontent">
+                                    <h3>Character - Talents / Skills</h3>
+                                    <div class="tal-container">
+                                        <span class="tal-content">Web development</span>
+                                    </div>
+                                    <div class="tal-container">
+                                        <span class="tal-content">Task Management</span>
+                                    </div>
+                                    <div class="tal-container">
+                                        <span class="tal-content">Problem Solving</span>
+                                    </div>
+                                    <!-- <p>Character Skill Coming Soon.</p> -->
+                                </div>
+
+                                <div id="Story" class="Story tabcontent">
+                                    <h3>Character - Stories</h3>
+                                    <p style="text-align: justify;">
+                                        Hello there!
+                                        Want hear more about character stories? Just contact him, and maybe he will tell you
+                                        some of his life story! <br><br>
+
+                                        Psst!
+                                        <i>(whispering)</i> Some story about his life, maybe a little bit too embarassing for him to tell.
+                                        So he decides to not write here about his story. But if you lucky enough, maybe he will spill some 
+                                        tea about that kind of story. If you know what I'm talking about... hehe sorry. I think he's watching us!
+                                        See you later! <br><br>
+
+                                        -The System
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="platform"></div>
+        
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="js/particles.js"></script>
+        <script src="js/app.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                // document.querySelectorAll("Education").style.display = "none";
+                // document.querySelectorAll("Talent").style.display = "none";
+                var education = document.querySelectorAll(".Education");
+                education.forEach(function (ed) {
+                    ed.style.display = "none";
+                });
+                var talent = document.querySelectorAll(".Talent");
+                talent.forEach(function (ta) {
+                    ta.style.display = "none";
+                });
+                var talent = document.querySelectorAll(".Experience");
+                talent.forEach(function (ta) {
+                    ta.style.display = "none";
+                });
+                var talent = document.querySelectorAll(".Project");
+                talent.forEach(function (ta) {
+                    ta.style.display = "none";
+                });
+                var talent = document.querySelectorAll(".Story");
+                talent.forEach(function (ta) {
+                    ta.style.display = "none";
+                });
+                
+            })
+            
+            function openAttribute(evt, cityName) {
+                // Declare all variables
+                var i, tabcontent, tablinks;
+
+                // Get all elements with class="tabcontent" and hide them
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+
+                // Get all elements with class="tablinks" and remove the class "active"
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" owned-property-active", "");
+                }
+
+                // Show the current tab, and add an "active" class to the button that opened the tab
+                // document.getElementById(cityName).style.display = "block";
+                var elements = document.querySelectorAll(`.${cityName}`);
+                elements.forEach(function (el) {
+                    el.style.display = "block";
+                });
+
+                evt.currentTarget.className += " owned-property-active";
+            }
+
+            function calculateAge(birthDate) {
+                const today = new Date();
+                const birth = new Date(birthDate);
+                
+                // Calculate age
+                let age = today.getFullYear() - birth.getFullYear();
+                const monthDiff = today.getMonth() - birth.getMonth();
+                
+                // If birthdate hasn't occurred yet this year, subtract 1 from age
+                if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
+                    age--;
+                }
+                
+                return age;
+            }
+
+            // Set birthdate here
+            const birthDate = '2001-08-17';  // Replace with your birthdate in YYYY-MM-DD format
+
+            // Update the age span with the calculated age
+            document.getElementById('age').innerText = calculateAge(birthDate);
+
+            // Optionally, you can use an interval to keep updating the age in real-time
+            setInterval(() => {
+                document.getElementById('age').innerText = calculateAge(birthDate);
+            }, 1000 * 60 * 60 * 24);  // Update daily (every 24 hours)
+        </script>
+    </body>
+</html>
